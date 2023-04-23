@@ -4,7 +4,7 @@
 	"bin": "./dist/index.js",
 	"type": "module",
 	"repository": {
-		"url": "https://github.com/yorkblansh/start"
+		"url": "https://github.com/yorkblansh/yush"
 	},
 	"engines": {
 		"node": ">=16"
