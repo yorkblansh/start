@@ -1,0 +1,7 @@
+{
+	"search.exclude": {
+		"**/.yarn": true,
+		"**/.pnp.*": true
+	},
+	"docker.commands.attach": "${containerCommand} exec -it ${containerId} fish"
+}
