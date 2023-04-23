@@ -1,5 +1,5 @@
 {
-	"name": "starter",
+	"name": "yush",
 	"version": "0.0.4",
 	"bin": "./dist/index.js",
 	"type": "module",
