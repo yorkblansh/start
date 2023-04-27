@@ -13,7 +13,7 @@ export const useYamlConfig = () => {
 	const isError: boolean = data !== undefined && data.error !== undefined
 
 	useEffect(() => {
-		fs.readFile('./.anyshell.yaml')
+		fs.readFile('./.yushrc')
 			.then((buffer) => YAML.parse(buffer.toString('utf8')))
 			.then(setData)
 	}, [])
