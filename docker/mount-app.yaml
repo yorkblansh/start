@@ -1,4 +1,0 @@
-services:
-  anyshell-dev:
-    volumes:
-      - ../:/app
