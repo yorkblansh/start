@@ -6,7 +6,7 @@ export const useYamlConfig = () => {
     const isLoading = data === undefined;
     const isError = data !== undefined && data.error !== undefined;
     useEffect(() => {
-        fs.readFile('./.anyshell.yaml')
+        fs.readFile('./.yushrc')
             .then((buffer) => YAML.parse(buffer.toString('utf8')))
             .then(setData);
     }, []);
