@@ -34,8 +34,7 @@ export const App = () => {
 	return (
 		<>
 			<Text>
-				{chalk.hex('#ff0055').italic.bgWhiteBright(' anyshell ')} cli app to run
-				your scripts
+				{chalk.hex('#ff0055').italic.bgWhiteBright(' your useful shell ')}
 			</Text>
 			<Text> </Text>
 			<Text>
@@ -44,12 +43,12 @@ export const App = () => {
 			{isLoading ? (
 				<Text>
 					Чтение конфига:{' '}
-					{chalk.hex('#ff0055').italic.bgWhiteBright(' .anyshell.yaml ')}
+					{chalk.hex('#ff0055').italic.bgWhiteBright(' .yushrc ')}
 				</Text>
 			) : isError ? (
 				<Text>
 					Не найден конфиг-файл:{' '}
-					{chalk.hex('#ff0055').italic.bgWhiteBright(' .anyshell.yaml ')}
+					{chalk.hex('#ff0055').italic.bgWhiteBright(' .yushrc ')}
 				</Text>
 			) : (
 				<Menu

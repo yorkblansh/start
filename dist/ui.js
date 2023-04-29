@@ -23,9 +23,7 @@ export const App = () => {
     const [isMenuFocused, setMenuFocus] = useState(true);
     useProcessResultReset(isMenuFocused, setPercent);
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, null,
-            chalk.hex('#ff0055').italic.bgWhiteBright(' anyshell '),
-            " cli app to run your scripts"),
+        React.createElement(Text, null, chalk.hex('#ff0055').italic.bgWhiteBright(' your useful shell ')),
         React.createElement(Text, null, " "),
         React.createElement(Text, null,
             chalk.bgBlue(' INFO '),
@@ -33,10 +31,10 @@ export const App = () => {
         isLoading ? (React.createElement(Text, null,
             "\u0427\u0442\u0435\u043D\u0438\u0435 \u043A\u043E\u043D\u0444\u0438\u0433\u0430:",
             ' ',
-            chalk.hex('#ff0055').italic.bgWhiteBright(' .anyshell.yaml '))) : isError ? (React.createElement(Text, null,
+            chalk.hex('#ff0055').italic.bgWhiteBright(' .yushrc '))) : isError ? (React.createElement(Text, null,
             "\u041D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D \u043A\u043E\u043D\u0444\u0438\u0433-\u0444\u0430\u0439\u043B:",
             ' ',
-            chalk.hex('#ff0055').italic.bgWhiteBright(' .anyshell.yaml '))) : (React.createElement(Menu, { isFocused: isMenuFocused, onSelect: (item) => {
+            chalk.hex('#ff0055').italic.bgWhiteBright(' .yushrc '))) : (React.createElement(Menu, { isFocused: isMenuFocused, onSelect: (item) => {
                 setMenuFocus(false);
                 commandExecutor(item.value, (callbackProps) => {
                     callbackProps.exitCode === 0
