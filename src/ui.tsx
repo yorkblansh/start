@@ -34,7 +34,7 @@ export const App = () => {
 	return (
 		<>
 			<Text>
-				{chalk.hex('#ff0055').italic.bgWhiteBright(' your useful shell ')}
+				{chalk.hex('#ff0055').italic.bgYellowBright(' your useful shell ')}
 			</Text>
 			<Text> </Text>
 			<Text>

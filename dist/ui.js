@@ -23,7 +23,7 @@ export const App = () => {
     const [isMenuFocused, setMenuFocus] = useState(true);
     useProcessResultReset(isMenuFocused, setPercent);
     return (React.createElement(React.Fragment, null,
-        React.createElement(Text, null, chalk.hex('#ff0055').italic.bgWhiteBright(' your useful shell ')),
+        React.createElement(Text, null, chalk.hex('#ff0055').italic.bgYellowBright(' your useful shell ')),
         React.createElement(Text, null, " "),
         React.createElement(Text, null,
             chalk.bgBlue(' INFO '),
