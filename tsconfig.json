@@ -24,7 +24,7 @@
 		// "useDefineForClassFields": true,
 		"forceConsistentCasingInFileNames": true,
 		"skipLibCheck": true,
-		"declaration": false,
+		"declaration": true,
 		"module": "ESNext",
 		"jsx": "react",
 		"esModuleInterop": true,

@@ -8,19 +8,22 @@ import { defaultHandler } from './StdHandlers/defaultHandler.js'
 import { npmScriptHandler } from './StdHandlers/npmScriptHandler.js'
 
 export const commandExecutor = (
-	{ cmd, setup }: Command,
+	{ cmd, type }: Command,
 	callback: (executionCallbackProps: ExecutionCallbackProps) => void,
 	_logger?: typeof logger,
 ) => {
-	const childProcess = shelljs.exec(cmd, { async: true, silent: true })
+	const childProcess = shelljs.exec(cmd.join(' && '), {
+		async: true,
+		silent: true,
+	})
 	const handlersMap: { [everyName in Setup]: StdHandler } = {
 		docker_compose: dockerComposeHandler,
 		default: defaultHandler,
 		npm_script: npmScriptHandler,
 	}
 
-	if (setup) {
-		handlersMap[setup](childProcess, callback, logger)
+	if (type) {
+		handlersMap[type](childProcess, callback, logger)
 	} else {
 		handlersMap['default'](childProcess, callback, logger)
 	}

@@ -23,8 +23,10 @@ export const App = () => {
 
 	const { yamlConfig, isError, isLoading } = useYamlConfig()
 
+	// console.log({ yamlConfig })
+
 	const commandNames = yamlConfig
-		? Object.keys(yamlConfig.commands)
+		? Object.keys(yamlConfig.your_useful_scripts)
 		: undefined
 
 	const [isMenuFocused, setMenuFocus] = useState(true)
@@ -71,7 +73,7 @@ export const App = () => {
 					items={commandNames?.map((commandName) => ({
 						label: commandName,
 						key: commandName,
-						value: yamlConfig?.commands[commandName],
+						value: yamlConfig?.your_useful_scripts[commandName],
 					}))}
 					indicatorComponent={({ isSelected }) =>
 						isSelected ? (

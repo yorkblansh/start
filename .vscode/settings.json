@@ -3,5 +3,6 @@
 		"**/.yarn": true,
 		"**/.pnp.*": true
 	},
-	"docker.commands.attach": "${containerCommand} exec -it ${containerId} fish"
+	"docker.commands.attach": "${containerCommand} exec -it ${containerId} fish",
+	"editor.formatOnSave": true
 }
