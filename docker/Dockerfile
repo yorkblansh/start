@@ -3,10 +3,10 @@ FROM node:18
 RUN apt update && apt install vim curl sudo fish tmux exa -y && \
 	echo "fish" >>~/.bashrc
 
-RUN LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*') && \
-	curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz" && \
-	tar xf lazygit.tar.gz lazygit && \
-	install lazygit /usr/local/bin
+# RUN LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*') && \
+# 	curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz" && \
+# 	tar xf lazygit.tar.gz lazygit && \
+# 	install lazygit /usr/local/bin
 
 RUN echo 'root:123' | chpasswd
 RUN echo 'node:123' | chpasswd
